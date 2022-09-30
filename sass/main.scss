@@ -1,0 +1,35 @@
+@use "./utils/variables";
+@use "./components/header";
+@use "./components/footer";
+@use "./components/logo";
+@use "./components/content";
+@use "./components/scope";
+@use "./components/team";
+@use "./components/customers";
+@use "./components/form";
+@use "./components/title";
+@use "./components/filters";
+@use "./components/products";
+
+body {
+  font-family: "Roboto";
+  color: var(--main-font-color);
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+.container {
+  width: 1600px;
+  margin: 0 auto;
+}
+.container > * {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.main {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}

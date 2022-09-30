@@ -1,0 +1,32 @@
+.content {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__header {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--dark-font-color);
+  }
+
+  &__p {
+    width: 270px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+  }
+
+  &__icon {
+    background-color: var(--light-background-color);
+    border-radius: 4px;
+  }
+}

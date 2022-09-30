@@ -1,0 +1,141 @@
+@use "./logo";
+
+.header {
+  border-bottom: 1px solid var(--header-border);
+
+  & > .container {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+    & > .header__content-box {
+      width: 1170px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__logo-nav-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.nav {
+  &__item {
+    display: inline;
+    margin-right: 40px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: var(--dark-font-color);
+  }
+
+  &__link--current {
+    color: var(--company-blue);
+    position: relative;
+    &::after {
+      border-radius: 4px;
+      content: "";
+      width: 100%;
+      height: 4px;
+      background-color: var(--company-blue);
+      display: inline-block;
+      position: absolute;
+      top: 45px;
+      left: 0;
+    }
+  }
+}
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mail {
+  text-decoration: none;
+  color: var(--main-font-color);
+  margin-right: 30px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+
+  transition-property: color;
+  transition-duration: 0.25s;
+  transition-timing-function: var(--transition-timing);
+
+  &:hover {
+    color: var(--company-blue);
+    cursor: pointer;
+  }
+
+  &__icon {
+    fill: var(--main-font-color);
+    transition-property: fill;
+    transition-duration: 0.25s;
+    transition-timing-function: var(--transition-timing);
+  }
+  &:hover > .mail__icon {
+    fill: var(--company-blue);
+  }
+  &:focus > .mail__icon {
+    fill: var(--company-blue);
+  }
+
+  &:focus {
+    color: var(--company-blue);
+  }
+
+  &__address {
+    margin-left: 10px;
+  }
+}
+
+.phone {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--mian-font-color);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  transition-property: color;
+  transition-duration: 0.25s;
+  transition-timing-function: var(--transition-timing);
+
+  &__number {
+    margin-left: 10px;
+  }
+
+  &:hover {
+    color: var(--company-blue);
+    cursor: pointer;
+  }
+
+  &:focus {
+    color: var(--company-blue);
+  }
+
+  &__icon {
+    fill: var(--main-font-color);
+    transition-property: fill;
+    transition-duration: 0.25s;
+    transition-timing-function: var(--transition-timing);
+  }
+
+  &:hover .phone__icon {
+    fill: var(--company-blue);
+  }
+
+  &:focus .phone__icon {
+    fill: var(--company-blue);
+  }
+}
