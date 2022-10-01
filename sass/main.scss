@@ -10,26 +10,51 @@
 @use "./components/title";
 @use "./components/filters";
 @use "./components/products";
+@use "./components/menu";
+
 
 body {
   font-family: "Roboto";
   color: var(--main-font-color);
+ 
+}
+
+@media screen and (min-width: 320px) and (max-width: calc(variables.$desktopWidth - 1px)) {
+  body{
+    overflow-x: hidden;
+  } 
 }
 
 ul {
   padding: 0;
   list-style: none;
 }
-.container {
-  width: 1600px;
-  margin: 0 auto;
+
+img {
+  object-fit: cover;
 }
 .container > * {
   margin: 0 auto;
   width: fit-content;
 }
 
-.main {
-  padding-top: 94px;
-  padding-bottom: 94px;
+@media screen and (min-width: variables.$mobileWidth) {
+.container {
+  width: variables.$mobileWidth;
+  margin: 0 auto;
+}
+}
+
+@media screen and (min-width: variables.$tabletWidth){
+.container {
+  width: variables.$tabletWidth;
+  margin: 0 auto;
+}
+}
+
+@media screen and (min-width: variables.$desktopWidth){
+.container {
+  width: 1600px;
+  margin: 0 auto;
+}
 }

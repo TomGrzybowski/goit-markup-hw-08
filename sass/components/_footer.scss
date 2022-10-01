@@ -1,86 +1,130 @@
 @use "./logo";
+@use "../utils/variables";
 
-.footer {
-  background: var(--dark-background-color);
+@media screen and (min-width: variables.$mobileWidth) {
+  .footer {
+    background: var(--dark-background-color);
 
-  &__content {
-    margin: 0 auto;
-    width: 1170px;
-    display: flex;
-    justify-content: flex-start;
-    padding: 60px 0;
-  }
-
-  &__list {
-    list-style-type: none;
-    padding-inline-start: 0px;
-  }
-  &__list > li {
-    margin: 10px 0;
-  }
-  &__address {
-    font-weight: 400;
-    font-size: 14px;
-
-    letter-spacing: 0.03em;
-
-    color: var(--white-color);
-  }
-  &__mail {
-    text-decoration: none;
-    color: var(--mian-font-color);
-
-    font-weight: 500;
-    font-size: 14px;
-    letter-spacing: 0.02em;
-    transition-property: color;
-    transition-duration: 0.25s;
-    transition-timing-function: var(--transition-timing);
-    &:hover {
-      color: var(--company-blue);
+    & .footer__content {
+      margin: 0 auto;
+      width: 450px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 60px;
+      padding: 60px 0;
     }
-    &:focus {
-      color: var(--company-blue);
-    }
-  }
-  &__phone {
-    text-decoration: none;
-    color: var(--mian-font-color);
 
-    font-weight: 500;
-    font-size: 14px;
-    letter-spacing: 0.02em;
-    transition-property: color;
-    transition-duration: 0.25s;
-    transition-timing-function: var(--transition-timing);
-    &:hover {
-      color: var(--company-blue);
+    &__column-1 {
+      display:block;
+      text-align:center;
+      width: 450px;
     }
-    &:focus {
-      color: var(--company-blue);
-    }
-  }
 
-  &__form {
-    width: 575px;
-    margin-left: 78px;
-    padding-top: 22px;
-    display: flex;
-    flex-wrap: wrap;
+    &__list {
+      list-style-type: none;
+      padding-inline-start: 0px;
+      margin-bottom: 0;
+    }
+    &__list > li {
+      margin: 10px 0;
+    }
+    &__address {
+      font-weight: 400;
+      font-size: 14px;
+
+      letter-spacing: 0.03em;
+
+      color: var(--white-color);
+    }
+    &__mail {
+      text-decoration: none;
+      color: var(--mian-font-color);
+
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+      transition-property: color;
+      transition-duration: 0.25s;
+      transition-timing-function: var(--transition-timing);
+      &:hover {
+        color: var(--company-blue);
+      }
+      &:focus {
+        color: var(--company-blue);
+      }
+    }
+    &__phone {
+      text-decoration: none;
+      color: var(--mian-font-color);
+
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+      transition-property: color;
+      transition-duration: 0.25s;
+      transition-timing-function: var(--transition-timing);
+      &:hover {
+        color: var(--company-blue);
+      }
+      &:focus {
+        color: var(--company-blue);
+      }
+    }
+
+    &__form {
+      width: 575px;
+      // margin-left: 78px;
+      // padding-top: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 }
 
+@media screen and (min-width: variables.$tabletWidth) and (max-width: calc(variables.$desktopWidth - 1px)){
+  .footer .footer__content {
+    width: 738px;
+  }
+
+  .footer__column-1 {
+    width: 45%;
+  }  
+}
+
+@media screen and (min-width: variables.$desktopWidth){
+  .footer {
+    & .footer__content {
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 70px;
+      width: 1170px;
+      padding: 94px 0;
+    }
+
+   &__column-1 {
+    width: fit-content;
+    text-align: left;
+   } 
+  }
+}
+
+@media screen and (min-width: variables.$mobileWidth){
 .socials {
-  display: inline;
-  margin-left: 70px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
 
   &__header {
     text-transform: uppercase;
     color: var(--white-color);
+    margin-top: 0;
   }
   &__list-icons {
     display: flex;
     gap: 10px;
+    margin-bottom: 0;
   }
   &__icon {
     fill: var(--white-color);
@@ -99,9 +143,32 @@
     background-color: var(--company-blue);
     cursor: pointer;
   }
+}  
 }
 
+@media screen and (min-width: variables.$tabletWidth) and (max-width: calc(variables.$desktopWidth - 1px)){
+  .socials {
+    width: 45%;
+  }
+  .socials__list-icons {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: variables.$desktopWidth){
+    .socials {
+      margin: 0;
+      text-align: left;
+    }
+  }
+  
+
+@media screen and (min-width: variables.$mobileWidth){   
 .newsletter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
   &__icon {
     position: absolute;
     top: 13px;
@@ -115,6 +182,7 @@
   &__submit {
     width: 200px;
     height: 50px;
+    margin-top: 30px;
     background: var(--company-blue);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -124,11 +192,8 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
-
-    margin-left: 12px;
-
+    
     position: relative;
-    top: -10px;
 
     transition-property: background-color;
   transition-duration: 0.25s;
@@ -152,7 +217,7 @@
       cursor: pointer;
       background-color: var(--dark-blue);
     }
-
+    
 .newsletter__button-text{
   transition-property: background-color;
   transition-duration: 0.25s;
@@ -163,6 +228,7 @@
   }
   &__label {
     width: 358px;
+    margin-bottom: 30px;
     color: white;
     font-weight: 700;
     font-size: 14px;
@@ -170,16 +236,44 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     display: block;
+    text-align: center;
   }
   &__input {
-    width: 358px;
+    width: 450px;
     height: 50px;
 
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
-    margin-top: 20px;
+    // margin-top: 20px;
     padding-left: 16px;
     background-color: transparent;
   }
+}
+
+}
+
+@media screen and (min-width: variables.$tabletWidth) and (max-width: calc(variables.$desktopWidth - 1px)){
+  
+}
+
+@media screen and (min-width: variables.$desktopWidth){
+
+.newsletter{
+  justify-content: flex-start;
+
+  &__label {
+    text-align: left;
+  }
+
+  &__input {
+    width: 358px;
+  }
+
+  &__submit {
+    margin-top: 0;
+    margin-left: 12px;
+  }
+}
+
 }

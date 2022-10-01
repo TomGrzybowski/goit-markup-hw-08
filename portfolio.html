@@ -14,6 +14,49 @@
     <title>Studio</title>
   </head>
   <body id="portfolio-page">
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li><a href="./index.html" class="link">Agencja</a></li>
+        <li><a href="./portfolio.html" class="link selected">Portfolio</a></li>
+        <li><a href="./kontakt.html" class="link">Kontakt</a></li>
+      </ul>
+
+      <div class="menu-contact">
+        <a class="menu-phone" href="tel:+48111111111">
+          <span class="phone__number">+48 111 111 111</span>
+        </a>
+
+        <a class="menu-mail" href="mailto:info@devstudio.com">
+          <span class="mail__address">info@devstudio.com</span>
+        </a>
+
+        <div class="menu-contact__socials">
+          <ul class="menu-contact__socials-list">
+            <li class="menu-contact__item"> <a href="./index.html">Instagram</a></li>
+            <li class="menu-contact__item"><a href="./index.html">Twitter</a></li>
+            <li class="menu-contact__item"><a href="./index.html">Facebook</a></li>
+            <li class="menu-contact__item"><a href="./index.html">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <header class="header">
       <div class="container">
         <div class="header__content-box">
@@ -21,40 +64,59 @@
             <a class="logo logo--header" href="./index.html">
               <span class="logo__web">Web</span>Studio
             </a>
+            
+            <button
+              class="menu-toggle js-open-menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+              >
+              <svg
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd"
+                  ></path>
+              </svg>
+            </button>
+
             <nav class="nav">
               <ul class="nav__list">
                 <li class="nav__item">
-                  <a class="nav__link" href="./index.html">Agencja</a>
+                  <a class="nav__link " href="./index.html"
+                    >Agencja</a
+                  >
                 </li>
                 <li class="nav__item">
-                  <a
-                    class="nav__link nav__link--current"
-                    href="./portfolio.html"
-                    >Portfolio</a
-                  >
+                  <a class="nav__link nav__link--current" href="./portfolio.html">Portfolio</a>
                 </li>
                 <li class="nav__item">
                   <a class="nav__link" href="./kontakt.html">Kontakt</a>
                 </li>
               </ul>
             </nav>
-          </div>
-          <div class="contact">
-            <a class="mail" href="mailto:info@devstudio.com">
-              <svg class="mail__icon" width="16" height="10">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              <span class="mail__address">info@devstudio.com</span>
-            </a>
-
-            <a class="phone" href="tel:+48111111111">
-              <div class="icon-container">
-                <svg class="phone__icon" width="10" height="16">
-                  <use href="./images/icons.svg#icon-smartphone"></use>
+            <div class="contact">
+              <a class="mail" href="mailto:info@devstudio.com">
+                <svg class="mail__icon" width="16" height="10">
+                  <use href="./images/icons.svg#icon-envelope"></use>
                 </svg>
-              </div>
-              <span class="phone__number">+48 111 111 111</span>
-            </a>
+                <span class="mail__address">info@devstudio.com</span>
+              </a>
+  
+              <a class="phone" href="tel:+48111111111">
+                <div class="icon-container">
+                  <svg class="phone__icon" width="10" height="16">
+                    <use href="./images/icons.svg#icon-smartphone"></use>
+                  </svg>
+                </div>
+                <span class="phone__number">+48 111 111 111</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -84,7 +146,12 @@
           <li class="products__item">
             <div class="products__container">
               <img
-                src="./images/portfolio-1.jpg"
+                src="./images/portfolio-1-370.jpg"
+                srcset="
+                ./images/portfolio-1-370.jpg 370w,
+                ./images/portfolio-1-540.jpg 720w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
                 alt="Laptop displaying employees profiles"
                 width="370"
                 height="294"
@@ -104,7 +171,12 @@
           <li class="products__item">
             <div class="products__container">
               <img
-                src="./images/portfolio-2.jpg"
+                src="./images/portfolio-2-370.jpg"
+                srcset="
+                ./images/portfolio-2-370.jpg 370w,
+                ./images/portfolio-2-540.jpg 720w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
                 alt="Two basketball players, one is trying to block a shot of the other"
                 width="370"
                 height="294"
@@ -125,7 +197,12 @@
           <li class="products__item">
             <div class="products__container">
               <img
-                src="./images/portfolio-3.jpg"
+                src="./images/portfolio-3-370.jpg"
+                srcset="
+                ./images/portfolio-3-370.jpg 370w,
+                ./images/portfolio-3-540.jpg 720w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
                 alt="The Seafood restaurant logo with a fish in the back"
                 width="370"
                 height="294"
@@ -146,7 +223,12 @@
           <li class="products__item">
             <div class="products__container">
               <img
-                src="./images/portfolio-4.jpg"
+                src="./images/portfolio-4-370.jpg"
+                srcset="
+                ./images/portfolio-4-370.jpg 370w,
+                ./images/portfolio-4-540.jpg 720w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
                 alt="Blach wireless headphones"
                 width="370"
                 height="294"
@@ -166,7 +248,12 @@
           <li class="products__item">
             <div class="products__container">
               <img
-                src="./images/portfolio-5.jpg"
+                src="./images/portfolio-5-370.jpg"
+                srcset="
+                ./images/portfolio-5-370.jpg 370w,
+                ./images/portfolio-5-540.jpg 720w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
                 alt="Two boxes on a white background"
                 width="370"
                 height="294"
@@ -186,7 +273,12 @@
           <li class="products__item">
             <div class="products__container">
               <img
-                src="./images/portfolio-6.jpg"
+                src="./images/portfolio-6-370.jpg"
+                srcset="
+                ./images/portfolio-6-370.jpg 370w,
+                ./images/portfolio-6-540.jpg 720w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
                 alt="An Apple screen displaying a world map with a sign saying Inspiration has no borders"
                 width="370"
                 height="294"
@@ -206,7 +298,12 @@
           <li class="products__item">
             <div class="products__container">
               <img
-                src="./images/portfolio-7.jpg"
+                src="./images/portfolio-7-370.jpg"
+                srcset="
+                ./images/portfolio-7-370.jpg 370w,
+                ./images/portfolio-7-540.jpg 720w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
                 alt="Limited edition of a magizne"
                 width="370"
                 height="294"
@@ -226,7 +323,12 @@
           <li class="products__item">
             <div class="products__container">
               <img
-                src="./images/portfolio-8.jpg"
+                src="./images/portfolio-8-370.jpg"
+                srcset="
+                ./images/portfolio-8-370.jpg 370w,
+                ./images/portfolio-8-540.jpg 720w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
                 alt="Label tag"
                 width="370"
                 height="294"
@@ -246,7 +348,12 @@
           <li class="products__item">
             <div class="products__container">
               <img
-                src="./images/portfolio-9.jpg"
+                src="./images/portfolio-9-370.jpg"
+                srcset="
+                ./images/portfolio-9-370.jpg 370w,
+                ./images/portfolio-9-540.jpg 720w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
                 alt="Laptop displaying growing business website"
                 width="370"
                 height="294"
@@ -369,5 +476,7 @@
         </div>
       </div>
     </footer>
+
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

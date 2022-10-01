@@ -1,10 +1,14 @@
+@use "../utils/variables";
+
+
 .content {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   &__list {
     display: flex;
-    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   &__header {
@@ -17,8 +21,6 @@
   }
 
   &__p {
-    width: 270px;
-
     font-weight: 400;
     font-size: 14px;
     line-height: 1.5;
@@ -30,3 +32,65 @@
     border-radius: 4px;
   }
 }
+
+@media screen and (min-width: variables.$mobileWidth) {
+.content {
+  &__header {
+   text-align: center;
+  }
+
+  &__p {
+    width: 450px;
+  }
+
+  &__icon {
+    width: 450px;
+    height: 120px;
+  }
+}
+}
+
+@media screen and (min-width: variables.$tabletWidth) {
+.content {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__list {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  &__header {
+    text-align: left;
+  }
+
+  &__p {
+    width: 354px;
+  }
+
+  &__icon {
+    width: 354px;
+    height: 120px;
+  }
+}
+}
+
+@media screen and (min-width: variables.$desktopWidth) {
+.content {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &__list {
+    gap: 30px;
+  }
+
+  &__p {
+    width: 270px;
+  }
+
+  &__icon {
+    width: 270px;
+  }
+}
+}
+

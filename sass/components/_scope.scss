@@ -1,3 +1,5 @@
+@use "../utils/variables";
+
 .scope {
   padding-bottom: 94px;
 
@@ -38,5 +40,11 @@
     justify-content: center;
     font-weight: 700;
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width: calc(variables.$desktopWidth - 1px)) {
+  .scope {
+    display: none;
   }
 }

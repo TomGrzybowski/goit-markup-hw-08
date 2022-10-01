@@ -1,19 +1,24 @@
-.filters {
-  list-style-type: none;
-  justify-content: center;
-  padding-inline-start: 0;
+@use "../utils/variables";
 
-  &__item {
-    display: inline;
-    margin-left: 8px;
+
+@media screen and (min-width: variables.$mobileWidth){
+
+  .main .filters {
+    width: 450px;
   }
-  &__item:first-child {
-    margin-left: 0;
-  }
+
+.filters {
+  display: flex;  
+  flex-wrap: wrap;
+  row-gap: 15px;
+  column-gap: 8px;
+  justify-content: flex-start;
+  padding-inline-start: 0;
+  padding: 0 0 40px;
+  
   &__buttons {
     width: 121px;
     height: 38px;
-    margin-bottom: 50px;
     background: var(--light-background-color);
     border-radius: 4px;
 
@@ -48,3 +53,47 @@
     }
   }
 }
+}
+
+@media screen and (min-width: variables.$tabletWidth) and (max-width: calc(variables.$desktopWidth - 1px)) {
+  .main .filters {
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: calc(variables.$tabletWidth - 30px);
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: variables.$desktopWidth) {
+  .main .filters {
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: calc(variables.$desktopWidth - 30px);
+  }
+
+  .filters {
+    justify-content: center;
+    padding-inline-start: 0;
+  
+    &__item {
+      display: inline;
+      margin-left: 8px;
+      &:first-child{
+        margin-left: 0;
+      }
+    }
+}
+}
+
+.main {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: variables.$desktopWidth) {
+  .main {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+

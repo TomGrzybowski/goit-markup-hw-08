@@ -75,6 +75,49 @@
       </div>
     </div>
 
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li><a href="./index.html" class="link selected">Agencja</a></li>
+        <li><a href="./portfolio.html" class="link">Portfolio</a></li>
+        <li><a href="./kontakt.html" class="link">Kontakt</a></li>
+      </ul>
+
+      <div class="menu-contact">
+        <a class="menu-phone" href="tel:+48111111111">
+          <span class="phone__number">+48 111 111 111</span>
+        </a>
+
+        <a class="menu-mail" href="mailto:info@devstudio.com">
+          <span class="mail__address">info@devstudio.com</span>
+        </a>
+
+        <div class="menu-contact__socials">
+          <ul class="menu-contact__socials-list">
+            <li class="menu-contact__item"> <a href="./index.html">Instagram</a></li>
+            <li class="menu-contact__item"><a href="./index.html">Twitter</a></li>
+            <li class="menu-contact__item"><a href="./index.html">Facebook</a></li>
+            <li class="menu-contact__item"><a href="./index.html">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <header class="header">
       <div class="container">
         <div class="header__content-box">
@@ -82,6 +125,27 @@
             <a class="logo logo--header" href="./index.html">
               <span class="logo__web">Web</span>Studio
             </a>
+            
+            <button
+              class="menu-toggle js-open-menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+              >
+              <svg
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd"
+                  ></path>
+              </svg>
+            </button>
+
             <nav class="nav">
               <ul class="nav__list">
                 <li class="nav__item">
@@ -97,23 +161,23 @@
                 </li>
               </ul>
             </nav>
-          </div>
-          <div class="contact">
-            <a class="mail" href="mailto:info@devstudio.com">
-              <svg class="mail__icon" width="16" height="10">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              <span class="mail__address">info@devstudio.com</span>
-            </a>
-
-            <a class="phone" href="tel:+48111111111">
-              <div class="icon-container">
-                <svg class="phone__icon" width="10" height="16">
-                  <use href="./images/icons.svg#icon-smartphone"></use>
+            <div class="contact">
+              <a class="mail" href="mailto:info@devstudio.com">
+                <svg class="mail__icon" width="16" height="10">
+                  <use href="./images/icons.svg#icon-envelope"></use>
                 </svg>
-              </div>
-              <span class="phone__number">+48 111 111 111</span>
-            </a>
+                <span class="mail__address">info@devstudio.com</span>
+              </a>
+  
+              <a class="phone" href="tel:+48111111111">
+                <div class="icon-container">
+                  <svg class="phone__icon" width="10" height="16">
+                    <use href="./images/icons.svg#icon-smartphone"></use>
+                  </svg>
+                </div>
+                <span class="phone__number">+48 111 111 111</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -212,7 +276,12 @@
             <div class="scope__box">
               <img
                 class="scope__img"
-                src="./images/img1.jpg"
+                src="./images/img1-370.jpg"
+                srcset="
+                ./images/img1-370.jpg 370w,
+                ./images/img1-720.jpg 720w
+                  "
+                  sizes="370px"
                 alt="Ręce oparte na klawiaturze w pozycji gotowej do pisania. Obok leży kartka z algorytmem"
                 width="370"
                 height="294"
@@ -224,7 +293,12 @@
             <div class="scope__box">
               <img
                 class="scope__img"
-                src="./images/img2.jpg"
+                src="./images/img2-370.jpg"
+                srcset="
+                ./images/img2-370.jpg 370w,
+                ./images/img2-720.jpg 720w
+                  "
+                  sizes="370px"
                 alt="Ręce trzymające telefon przed ekranem laptopa, na którym wyświetlane są wzory układu elementów aplikacji"
                 width="370"
                 height="294"
@@ -236,7 +310,12 @@
             <div class="scope__box">
               <img
                 class="scope__img"
-                src="./images/img3.jpg"
+                src="./images/img3-370.jpg"
+                srcset="
+                ./images/img3-370.jpg 370w,
+                ./images/img3-720.jpg 720w
+                  "
+                  sizes="370px"
                 alt="Ręce trzymające tableta wyświetlającego palete kolorów"
                 width="370"
                 height="294"
@@ -255,7 +334,12 @@
           <li class="team__item">
             <img
               class="team__img"
-              src="./images/person1.jpg"
+              src="./images/person1-270.jpg"
+              srcset="
+                ./images/person1-270.jpg 370w,
+                ./images/person1-540.jpg 720w
+                  "
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw"
               alt="Uśmiechnięty mężczyzna z krótkim zarostem w okularach i czerwonej koluszli"
               width="270"
               height="260"
@@ -316,7 +400,12 @@
           <li class="team__item">
             <img
               class="team__img"
-              src="./images/person2.jpg"
+              src="./images/person2-270.jpg"
+              srcset="
+                ./images/person2-270.jpg 370w,
+                ./images/person2-540.jpg 720w
+                  "
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw"
               alt="Uśmiechnięta Kobieta w okularach i czarnej marynarce"
               width="270"
               height="260"
@@ -377,7 +466,12 @@
           <li class="team__item">
             <img
               class="team__img"
-              src="./images/person3.jpg"
+              src="./images/person3-270.jpg"
+              srcset="
+                ./images/person3-270.jpg 370w,
+                ./images/person3-540.jpg 720w
+                  "
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw"
               alt="Uśmiechnięty mężczyzna w jasnoniebieskiej koszuli"
               width="270"
               height="260"
@@ -438,7 +532,12 @@
           <li class="team__item">
             <img
               class="team__img"
-              src="./images/person4.jpg"
+              src="./images/person4-270.jpg"
+              srcset="
+                ./images/person4-270.jpg 370w,
+                ./images/person4-540.jpg 720w
+                  "
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw"
               alt="Mężczyzna z krótkim zarostem w okularach i czarnej koszulce"
               width="270"
               height="260"
@@ -683,6 +782,7 @@
       </div>
     </footer>
 
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

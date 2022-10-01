@@ -1,72 +1,133 @@
-.container > .products {
-  width: 1170px;
+@use "../utils/variables";
+
+$width: 450px;
+
+@media screen and (min-width: variables.$mobileWidth){
+  .container > .products {
+    width: calc(variables.$mobileWidth - 30px);
+  }
 }
 
-.products {
-  list-style-type: none;
-  padding-inline-start: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+@media screen and (min-width: variables.$tabletWidth) and (max-width: calc(variables.$desktopWidth - 1px)) {
+  .container > .products {
+    width: calc(variables.$tabletWidth - 30px);
+  }
+}
 
-  &__item {
-    width: 370px;
-    height: 404px;
-    position: relative;
-    border: 1px solid var(--list-border-color);
-    transition-property: box-shadow;
-    transition-duration: 0.25s;
-    transition-timing-function: var(--transition-timing);
-    &:hover {
-      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+@media screen and (min-width: variables.$desktopWidth){
+  .container > .products {
+  width: calc(variables.$desktopWidth - 30px);
+}
+}
+
+@media screen and (min-width: variables.$mobileWidth){
+  .products {
+    list-style-type: none;
+    padding-inline-start: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    & img {
+      width: $width;
+      object-fit: cover;
     }
-    &:hover .products__box {
-      transform: translate(0, 0);
+
+    &__item {
+      width: $width;
+      // height: 404px;
+      position: relative;
+      border: 1px solid var(--list-border-color);
+      transition-property: box-shadow;
+      transition-duration: 0.25s;
+      transition-timing-function: var(--transition-timing);
+      &:hover {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+          0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+      }
+      &:hover .products__box {
+        transform: translate(0, 0);
+      }
+    }
+    &__container {
+      position: relative;
+      width: $width;
+      height: 294px;
+      overflow: hidden;
+    }
+    &__box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      width: $width;
+      height: 294px;
+      justify-content: center;
+      align-items: center;
+      background: var(--blue-opaque);
+      transform: translate(0, 300px);
+      transition-property: transform;
+      transition-duration: 0.25s;
+      transition-timing-function: var(--transition-timing);
+    }
+    &__box > p {
+      width: 301px;
+      margin: 0 auto;
+
+      color: var(--white-color);
+      font-size: 18px;
+      line-height: 1.56;
+      text-align: left;
+    }
+    &__name {
+      font-weight: 700;
+      font-size: 18px;
+      margin: 20px 0px 8px 24px;
+
+      letter-spacing: 0.06em;
+
+      color: var(--dark-font-color);
+    }
+    &__tag {
+      font-weight: 400;
+      margin-left: 24px;
+      letter-spacing: 0.03em;
     }
   }
-  &__container {
-    position: relative;
-    width: 370px;
-    height: 294px;
-    overflow: hidden;
+}
+
+@media screen and (min-width: variables.$tabletWidth) and (max-width: calc(variables.$desktopWidth - 1px)) {
+  .products {
+    $width: 354px;
+    
+    & img {
+      width: $width;
+      object-fit: cover;
+    }
+
+    &__item {
+      width: $width;
   }
   &__box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    width: 370px;
-    height: 294px;
-    justify-content: center;
-    align-items: center;
-    background: var(--blue-opaque);
-    transform: translate(0, 300px);
-    transition-property: transform;
-    transition-duration: 0.25s;
-    transition-timing-function: var(--transition-timing);
+    width: $width;
   }
-  &__box > p {
-    width: 301px;
-    margin: 0 auto;
+}
+}
 
-    color: var(--white-color);
-    font-size: 18px;
-    line-height: 1.56;
-    text-align: left;
-  }
-  &__name {
-    font-weight: 700;
-    font-size: 18px;
-    margin: 20px 0px 8px 24px;
+@media screen and (min-width: variables.$desktopWidth){
+  .products {
+  $width: 370px;
+    
+    & img {
+      width: $width;
+      object-fit: cover;
+    }
 
-    letter-spacing: 0.06em;
-
-    color: var(--dark-font-color);
+    &__item {
+      width: $width;
   }
-  &__tag {
-    font-weight: 400;
-    margin-left: 24px;
-    letter-spacing: 0.03em;
+  &__box {
+    width: $width;
   }
+}
 }

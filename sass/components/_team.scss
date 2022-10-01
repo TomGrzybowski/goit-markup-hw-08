@@ -1,9 +1,12 @@
+@use "../utils/variables";
+
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   background: var(--light-background-color);
-
+  
+ 
   & .team__list {
     list-style-type: none;
     display: flex;
@@ -11,6 +14,7 @@
 
     margin-top: 50px;
   }
+
   &__header {
     margin: auto;
     font-weight: 700;
@@ -21,7 +25,7 @@
   }
 
   &__item {
-    width: 270px;
+    width: 450px;
     /* height: 368px; */
 
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -51,6 +55,9 @@
     display: flex;
     justify-content: center;
     gap: 10px;
+    & > li {
+      height: 44px;
+    }
   }
 
   &__icon {
@@ -70,4 +77,64 @@
     fill: white;
     background-color: var(--company-blue);
   }
+
+  &__img {
+    object-fit: cover;
+  }
 }
+
+@media screen and (min-width: variables.$mobileWidth) and (max-width: calc(variables.$tabletWidth - 1px)) {
+ .team {
+  & .team__list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__img {
+    width: 450px;
+    height: 460px;
+  }
+
+ }
+}
+
+@media screen and (min-width: variables.$tabletWidth) and (max-width: calc(variables.$desktopWidth - 1px)){
+ .team {
+  & .team__list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__item {
+    width: 354px;
+  }
+
+  &__img {
+    width: 354px;
+    height: 374px;
+  }
+
+ }
+}
+
+@media screen and (min-width: variables.$desktopWidth) {
+ .team {
+
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  & .team__list {
+    justify-content: center;
+  }
+
+  &__item {
+    width: 270px;
+  }
+
+  &__img {
+    width: 270px;
+    height: 260px;
+  }
+ }
+}
+
