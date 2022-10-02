@@ -1,7 +1,7 @@
 @use "./logo";
 @use "../utils/variables";
 
-@media screen and (min-width: variables.$mobileWidth) {
+
   .footer {
     background: var(--dark-background-color);
 
@@ -81,7 +81,7 @@
       justify-content: center;
     }
   }
-}
+
 
 @media screen and (min-width: variables.$tabletWidth) and (max-width: calc(variables.$desktopWidth - 1px)){
   .footer .footer__content {
@@ -110,7 +110,7 @@
   }
 }
 
-@media screen and (min-width: variables.$mobileWidth){
+
 .socials {
   display: block;
   text-align: center;
@@ -144,7 +144,7 @@
     cursor: pointer;
   }
 }  
-}
+
 
 @media screen and (min-width: variables.$tabletWidth) and (max-width: calc(variables.$desktopWidth - 1px)){
   .socials {
@@ -163,7 +163,6 @@
   }
   
 
-@media screen and (min-width: variables.$mobileWidth){   
 .newsletter {
   display: flex;
   flex-wrap: wrap;
@@ -251,7 +250,6 @@
   }
 }
 
-}
 
 @media screen and (min-width: variables.$tabletWidth) and (max-width: calc(variables.$desktopWidth - 1px)){
   
@@ -275,5 +273,4 @@
     margin-left: 12px;
   }
 }
-
 }

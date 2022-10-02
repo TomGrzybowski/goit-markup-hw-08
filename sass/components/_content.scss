@@ -16,7 +16,7 @@
     font-size: 14px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-
+    text-align: center;
     color: var(--dark-font-color);
   }
 
@@ -25,29 +25,15 @@
     font-size: 14px;
     line-height: 1.5;
     letter-spacing: 0.03em;
+    width: 450px;
   }
 
   &__icon {
     background-color: var(--light-background-color);
     border-radius: 4px;
-  }
-}
-
-@media screen and (min-width: variables.$mobileWidth) {
-.content {
-  &__header {
-   text-align: center;
-  }
-
-  &__p {
-    width: 450px;
-  }
-
-  &__icon {
     width: 450px;
     height: 120px;
   }
-}
 }
 
 @media screen and (min-width: variables.$tabletWidth) {

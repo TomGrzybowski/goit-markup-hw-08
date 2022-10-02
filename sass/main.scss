@@ -19,7 +19,7 @@ body {
  
 }
 
-@media screen and (min-width: 320px) and (max-width: calc(variables.$desktopWidth - 1px)) {
+@media screen and (max-width: calc(variables.$desktopWidth - 1px)) {
   body{
     overflow-x: hidden;
   } 
@@ -38,12 +38,12 @@ img {
   width: fit-content;
 }
 
-@media screen and (min-width: variables.$mobileWidth) {
+
 .container {
   width: variables.$mobileWidth;
   margin: 0 auto;
 }
-}
+
 
 @media screen and (min-width: variables.$tabletWidth){
 .container {

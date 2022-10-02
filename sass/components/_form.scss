@@ -20,23 +20,19 @@
 }
 
 
-
-
-
-@media screen and (min-width: variables.$mobileWidth){
   .modal {
     position: absolute;
     width: 450px;
     height: 609px;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-100%) translateY(-100%);
     background: var(--white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
   } 
-}
+
 
 @media screen and (min-width: variables.$desktopWidth){
   .modal {
@@ -49,7 +45,7 @@
 
 
 
-@media screen and (min-width: variables.$mobileWidth){
+
   .close-btn {
   width: 30px;
   height: 30px;
@@ -74,7 +70,7 @@
     cursor: pointer;
   }
 }
-}
+
 
 
 @media screen and (min-width: variables.$desktopWidth){
@@ -87,7 +83,7 @@
 
 
 
-@media screen and (min-width: variables.$mobileWidth){
+
   .order {
   display: flex;
   flex-wrap: wrap;
@@ -214,7 +210,7 @@
     background-image: url("../images/icons/check.svg");
   }
 }
-}
+
 
 
 @media screen and (min-width: variables.$desktopWidth){

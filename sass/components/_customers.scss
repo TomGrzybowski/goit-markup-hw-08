@@ -24,6 +24,7 @@
     transition-property: fill, border-color;
     transition-duration: 0.25s;
     transition-timing-function: var(--transition-timing);
+    width: 210px;
   }
 
   &__link:focus > .customers__icon {
@@ -35,12 +36,6 @@
     fill: var(--company-blue);
     border-color: var(--company-blue);
     cursor: pointer;
-  }
-}
-
-@media screen and (min-width: variables.$mobileWidth) and (max-width: calc(variables.$tabletWidth - 1px)){
-  .customers__icon {
-    width: 210px;
   }
 }
 

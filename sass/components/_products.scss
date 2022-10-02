@@ -2,11 +2,11 @@
 
 $width: 450px;
 
-@media screen and (min-width: variables.$mobileWidth){
+
   .container > .products {
     width: calc(variables.$mobileWidth - 30px);
   }
-}
+
 
 @media screen and (min-width: variables.$tabletWidth) and (max-width: calc(variables.$desktopWidth - 1px)) {
   .container > .products {
@@ -20,7 +20,7 @@ $width: 450px;
 }
 }
 
-@media screen and (min-width: variables.$mobileWidth){
+
   .products {
     list-style-type: none;
     padding-inline-start: 0;
@@ -94,7 +94,7 @@ $width: 450px;
       letter-spacing: 0.03em;
     }
   }
-}
+
 
 @media screen and (min-width: variables.$tabletWidth) and (max-width: calc(variables.$desktopWidth - 1px)) {
   .products {

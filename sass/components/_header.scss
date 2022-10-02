@@ -1,7 +1,12 @@
 @use "./logo";
 @use "../utils/variables";
 
-@media screen and (min-width: variables.$mobileWidth){
+.nav {
+
+  display: none;
+
+} 
+
 .header {
   border-bottom: 1px solid var(--header-border);
 
@@ -47,7 +52,6 @@
   }
 }
 
-}
 
 @media screen and (min-width: variables.$tabletWidth) and (max-width: calc(variables.$desktopWidth - 1px)) {
   .header {
@@ -121,13 +125,8 @@ margin-left: 270px;
 }
 
 
-@media screen and (min-width: variables.$mobileWidth){
-  .nav {
+  
 
-      display: none;
-
-  } 
-}
 
 @media screen and (min-width: variables.$tabletWidth) and (max-width: calc(variables.$desktopWidth - 1px)) {
   .nav {

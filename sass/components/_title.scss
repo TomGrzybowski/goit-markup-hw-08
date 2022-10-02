@@ -1,6 +1,6 @@
 @use "../utils/variables";
 
-@media screen and (min-width: variables.$mobileWidth){
+
   .title {
 
     background-color: var(--dark-background-color);
@@ -72,7 +72,7 @@
     background: var(--dark-blue);
     }
   }
-}
+
 
 @media screen and (min-width: variables.$tabletWidth) and (max-width: calc(variables.$desktopWidth - 1px)) {
   .title {
