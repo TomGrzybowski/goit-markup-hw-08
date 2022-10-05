@@ -8,7 +8,13 @@
 } 
 
 .header {
+  
   border-bottom: 1px solid var(--header-border);
+  
+  .container {
+    // border-bottom: 1px solid var(--header-border);
+  }
+  
 
   & .contact {
     display: none;
@@ -38,14 +44,16 @@
     justify-content: space-between;
 
     & > .header__content-box {
-      width: 480px;
+      min-width: 320px;
+      width: auto;
       display: flex;
       justify-content: space-between;
     }
   }
 
   &__logo-nav-box {
-    width: 480px;
+    min-width: 320px;
+      width: 90vw;
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -5,8 +5,8 @@
 
     background-color: var(--dark-background-color);
     & .title__header {
-      width: 365px;
-      height: 84px;
+      min-width: 320px;
+      width: auto;
       color: white;
 
       font-weight: 900;
@@ -19,7 +19,7 @@
     }
     
     & > .container {
-      min-width: variables.$mobileWidth;
+      min-width: 320px;
       width: auto;
       height: 400px;
       display: flex;

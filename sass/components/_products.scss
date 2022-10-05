@@ -1,10 +1,11 @@
 @use "../utils/variables";
 
-$width: 450px;
+$width: auto;
 
 
   .container > .products {
-    width: calc(variables.$mobileWidth - 30px);
+    min-width: 320px;
+  width: 90vw;
   }
 
 
@@ -25,16 +26,24 @@ $width: 450px;
     list-style-type: none;
     padding-inline-start: 0;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
 
     & img {
-      width: $width;
+      min-width: 320px;
+      max-width: 450px;
+  width: 93.75vw;
+  min-height: 210px;
+  max-height: 294px;
+  height: 61.25vw;
       object-fit: cover;
     }
 
     &__item {
-      width: $width;
+      min-width: 320px;
+  width: auto;
+  height: auto;
       // height: 404px;
       position: relative;
       border: 1px solid var(--list-border-color);
@@ -51,8 +60,10 @@ $width: 450px;
     }
     &__container {
       position: relative;
-      width: $width;
-      height: 294px;
+      min-width: 320px;
+      max-width: 450px;
+  width: auto;
+      // height: 294px;
       overflow: hidden;
     }
     &__box {
@@ -60,12 +71,13 @@ $width: 450px;
       top: 0;
       left: 0;
       display: flex;
-      width: $width;
-      height: 294px;
+      min-width: 320px;
+      width: 100%;
+      height: 100%;
       justify-content: center;
       align-items: center;
       background: var(--blue-opaque);
-      transform: translate(0, 300px);
+      transform: translate(0, 600px);
       transition-property: transform;
       transition-duration: 0.25s;
       transition-timing-function: var(--transition-timing);
@@ -99,6 +111,7 @@ $width: 450px;
 @media screen and (min-width: variables.$tabletWidth) and (max-width: calc(variables.$desktopWidth - 1px)) {
   .products {
     $width: 354px;
+    justify-content: space-between;
     
     & img {
       width: $width;

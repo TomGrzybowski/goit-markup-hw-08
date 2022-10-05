@@ -3,11 +3,17 @@
 
 
   .footer {
+    
     background: var(--dark-background-color);
+
+    & .container {
+      background: var(--dark-background-color);
+    }
 
     & .footer__content {
       margin: 0 auto;
-      width: 450px;
+      min-width: 320px;
+      width: auto;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -18,7 +24,8 @@
     &__column-1 {
       display:block;
       text-align:center;
-      width: 450px;
+      min-width: 320px;
+      width: auto;
     }
 
     &__list {
@@ -73,7 +80,8 @@
     }
 
     &__form {
-      width: 575px;
+      min-width: 320px;
+      width: auto;
       // margin-left: 78px;
       // padding-top: 22px;
       display: flex;
@@ -107,6 +115,10 @@
     width: fit-content;
     text-align: left;
    } 
+
+   &__form {
+    min-width: 575px;
+  }
   }
 }
 
@@ -167,7 +179,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
+  min-width: 320px;
+  width: auto;
   &__icon {
     position: absolute;
     top: 13px;
