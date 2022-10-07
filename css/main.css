@@ -19,6 +19,8 @@
 }
 
 .logo {
+  width: 145px;
+  height: 35px;
   font-family: "Raleway";
   text-decoration: none;
   font-weight: 700;
