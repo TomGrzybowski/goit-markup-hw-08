@@ -964,7 +964,9 @@
 
 .modal {
   position: absolute;
-  width: 450px;
+  max-width: 450px;
+  width: 95vw;
+  padding: 5px;
   height: 609px;
   top: 50%;
   left: 50%;
@@ -991,7 +993,7 @@
   background-position: 50% 50%;
   position: absolute;
   top: 8px;
-  left: 412px;
+  right: 8px;
   -webkit-transition-property: background-color;
   transition-property: background-color;
   -webkit-transition-duration: 0.25s;
@@ -1025,14 +1027,16 @@
   margin-top: 40px;
 }
 .order__label {
-  width: 370px;
+  max-width: 370px;
+  width: 95%;
   margin-bottom: 4px;
   font-size: 12px;
   line-height: 1;
   position: relative;
 }
 .order__text {
-  width: 370px;
+  max-width: 370px;
+  width: 95%;
   height: 120px;
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -1051,7 +1055,8 @@
   letter-spacing: 0.03em;
   cursor: pointer;
   position: relative;
-  width: 370px;
+  max-width: 370px;
+  width: 95%;
 }
 .order__policy-label::before {
   display: block;
@@ -1119,7 +1124,8 @@
   border-color: var(--company-blue);
 }
 .order > label:nth-child(-n+4) > input {
-  width: 370px;
+  max-width: 370px;
+  width: 95%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
